@@ -1,0 +1,99 @@
+<upi:ReqPay xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0|2.0" ts="" orgId="" msgId="" />
+    <Meta>
+        <Tag name="PAYREQSTART" value="" />
+        <Tag name="PAYREQEND" value="" />
+    </Meta>
+    <Txn id="" note="" custRef="" refId="" refUrl="" ts="" refCategory= ”00|01|02|03|04|05|06|07|08|09” type="PAY|COLLECT|DEBIT|CREDIT|REVERSAL|REFUND" orgTxnId= ”” orgRrn= ”” orgTxnDate= ’” purpose= ”00|01|02|03|04|05|06|07|08|09|10”
+        <null>
+            initiationMode="00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15" subType="" orgRespCode=””>
+            <null>
+                <RiskScores>
+                    <Score provider="sp" type="TXNRISK" value="" />
+                    <Score provider="npci" type="TXNRISK" value="" />
+                </RiskScores>
+                <Rules>
+                    <Rule name="EXPIREAFTER" value="1 miniute to max 64800 minitues" />
+                    <null>
+                        <Rule name="MINAMOUNT" value="" />
+                </Rules>
+    </Txn>
+    <Payer addr="" name="" seqNum="" type="PERSON|ENTITY" code="">
+        <Merchant>
+            <Identifier subCode= ”” mid= ””” sid= ”” tid= ”” merchantType= ”SMALL|LARGE” merchantGenre= ”OFFLINE|ONLINE” onBoardingType= ”BANK|AGGREGATOR” />
+            <Name brand= ”” legal= ”” franchise= ”” />
+            <Ownership type="PROPRIETARY|PARTNERSHIP|PRIVATE|PUBLIC|OTHERS" />
+        </Merchant>
+        <Institution type= ”MTO|BANK” route= ”MTSS|RDA”>
+            <Name value= ”” acNum= ’’” />
+            <Purpose code= ”” note= ”” />
+            <Originator name= ”” type= ”INDIVIDUAL|COMPANY” refNo= ””>
+                <Address location= ”” city= ”” country= ”” geocode= ”” />
+            </Originator>
+            <Beneficiary name= ”” />
+        </Institution>
+        <Info>
+            <Identity id= “” type="PAN|AADHAAR|ACCOUNT" verifiedName="" />
+            <Rating VerifiedAddress="TRUE|FALSE" />
+        </Info>
+        <Device>
+            <Tag name="MOBILE" value="" />
+            <Tag name="GEOCODE" value="" />
+            <Tag name="LOCATION" value="" />
+            <Tag name="IP" value="" />
+            <Tag name="TYPE" value="" />
+            <Tag name="ID" value="" />
+            <Tag name="OS" value="" />
+            <Tag name="APP" value="" />
+            <Tag name="CAPABILITY" value="" />
+            <Tag name="TELECOM" value="Airtel/Vodafone/..." />
+        </Device>
+        <Ac addrType="AADHAAR">
+            <Detail name="IIN" value="" />
+            <Detail name="UIDNUM" value="" />
+        </Ac>
+        <Ac addrType="ACCOUNT">
+            <Detail name="IFSC" value="" />
+            <Detail name="ACTYPE" value="SAVINGS|CURRENT|DEFAULT|NRE|NRO|CREDIT|PPIWALLET|BANKWALLET|SOD|UOD”/>
+<Detail name=" ACNUM" value=" MOBILE">
+<Detail name=" MMID" value=" MOBNUM" value=" CARD">
+<Detail name=" ACTYPE" value=" SAVINGS|CURRENT|DEFAULT"/>
+<Detail name=" CARDNUM" value=" AADHAAR" subType=" AADHAAR-BIO-FP|AADHAAR-BIO-IRIS|AADHAAR-BIO-OTP">
+<Meta lk=“” ac=“” sa=“” uid=“” ver=””/>
+<Datacode=" OTP" subType=" SMS|EMAIL|HOTP|TOTP">
+<Datacode=" PIN" subType=" MPIN">
+<Datacode=" CARD" subType=" CVV1|CVV2|EMV">
+<Datacode=" PREAPPROVED" subType=" NA">
+<Data> base-64 encoded</Data>
+</Cred>
+</Creds>
+<Amount value=" INR">
+<Split name=" PURCHASE|CASHBACK" value=" PERSON|ENTITY" code=" PROPRIETARY|PARTNERSHIP|PRIVATE|PUBLIC|OTHERS"/>
+</Merchant>
+<Info>
+<Identity id=”” type=" PAN|AADHAAR|ACCOUNT" verifiedName=" TRUE|FALSE"/>
+</Info>
+<Device>
+<Tag name=" MOBILE" value=" +91.99999.99999"/>
+<Tag name=" GEOCODE" value=" 12.9667,77.5667"/>
+<Tag name=" LOCATION" value=" Sarjapur Road, Bangalore, KA, IN" /> <! —It is mandatory for
+Merchant for payee-- >
+<Tag name=" IP" value=" 123.456.123.123"/>
+<Tag name=" TYPE" value=" ID" value=" 123456789"/>
+<Tag name=" OS" value=" Android 4.4"/>
+<Tag name=" APP" value=" CC 1.0"/>
+<Tag name=" CAPABILITY" value=" 011001"/>
+<Tag name=" TELECOM" value=" Airtel Vodafone .."/>
+</Device>
+<Ac addrType =" AADHAAR">
+<Detail name=" IIN" value=" UIDNUM" value=" ACCOUNT">
+<Detail name=" IFSC" value=" ACTYPE" value=" SAVINGS|CURRENT|DEFAULT|NRE|NRO|CREDIT|PPIWALLET|BANKWALLET| SOD|UOD” />
+            <Detail name="ACNUM" value="" />
+        </Ac>
+        <Amount value="" curr="INR">
+            <Split name="PURCHASE|CASHBACK" value="" />
+        </Amount>
+        </Payee>
+        </Payees>
+</upi:ReqPay>
+    

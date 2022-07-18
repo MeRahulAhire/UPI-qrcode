@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,500&family=Roboto:wght@400;700&display=swap');
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: #131313;
+    display: grid;
+    grid-template-columns: 2fr 7.5fr;
+    grid-template-areas: 
+    "a b";
+
+}
+.qr{
+    min-height: 100vh;
+    max-height: auto;
+    grid-area: a;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    /* background-image: url('https://images.pexels.com/photos/3648850/pexels-photo-3648850.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position: center; */
+}
+.qr-box{
+    height: 200px;
+    width: 200px;
+    
+    border-radius: 15px;
+    border: white solid 3px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+.qr-box p{
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    color: #f7f7f7;
+    margin: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 1;
+}
+#qrcode{
+    position: absolute;
+    z-index: 2;
+}
+.scanqr{
+    font-family: 'Roboto', sans-serif;
+    color: #f7f7f7;
+    text-align: center;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+.form{
+    min-height: 100vh;
+    grid-area: b;
+    width: 100%;
+    background-color: #242424;
+    display: grid;
+    place-items: center;
+    max-height: auto;
+}
+
+
+.form-head{
+    color: #f7f7f7;
+    font-family: 'Open Sans', sans-serif;
+    /* text-align: center; */
+}
+.form-head p{
+    opacity: 0.4;
+}
+.form-head p a{
+    color: #f7f7f7;
+    cursor: pointer;
+}
+.form-container{
+    margin-top: 1.5rem;
+}
+.input{
+    background: none;
+    height: 40px;
+    width: 500px;
+    padding-left: 0.75rem;
+    border: solid rgba(247, 247, 247, 0.317) 2px;
+    color: #f7f7f7;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 1.2rem;
+}
+#btn{
+    margin-top: 1.5rem;
+    background-color: rgb(83, 83, 185);
+    height: 40px;
+    width: 150px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+}

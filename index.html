@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>UPI QRcode generator</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="qr">
+            <div class="qr-wrap">
+                <div class="qr-box">
+                    <p>Enter the VPA to generate QR code</p>
+                    <div id="qrcode">
+                    </div>  
+                </div>
+                <p class="scanqr">Scan the QR code</p>
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-wrap">
+                <div class="form-head">
+                    <h1>Please fill up the Details</h1>
+                    <p>We don't collect your data. The QRcode is being generated on your device. <a href="http://" target="_blank">Learn More</a></p>
+                </div>
+                <div class="form-container" id="formInfo">
+                    <div class="fc-wrap">
+                        <input class="input" id="vpa" type="text" placeholder="Enter your VPA or UPI ID"/><br>
+                        <input class="input" id="amount" type="tel" placeholder="Amount"><br>
+                        <input class="input" id="note" type="text" placeholder="Add Note"><br>
+                        <input class="input" id="url" type="text" placeholder="Add Url (optional)"><br>
+                        <button id="btn">Send Money</button>
+                        <a href="" id="upiA"> Payment link
+                        </a>
+                            
+                        <div id="upilink"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        let form = document.getElementById('formInfo')
+        let vpa = document.getElementById('vpa')
+        let amount = document.getElementById('amount');
+        let note = document.getElementById('note');
+        let url = document.getElementById('url');
+        let upilink = document.getElementById('upilink');
+        let btn = document.getElementById('btn')
+    
+        btn.addEventListener('click', ()=> {
+            let upiString  = `upi://pay?pa=${vpa.value}&am=${amount.value}&tn=${encodeURIComponent(note.value)}`;
+            // window.location = `upi://pay?pa=${vpa.value}&am=${amount.value}&tn=${encodeURIComponent(note.value)}&url=${url.value}`
+            document.getElementById('upiA').href = upiString
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                text:  `upi://pay?pa=${vpa.value}&am=${amount.value}&tn=${encodeURIComponent(note.value)}&url=${url.value}`,
+                width: 180,
+                height: 180,
+                colorDark : "#131313",
+                colorLight : "#ffffff",
+            });
+        })
+
+        
+        </script>
+        
+  </body>
+</html>
